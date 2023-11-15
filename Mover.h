@@ -1,11 +1,7 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
-
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "Mover.generated.h"
-
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class CRYPTRAIDER_API UMover : public UActorComponent
@@ -26,16 +22,12 @@ public:
 
 	void SetShouldMove(bool ShouldMove); 
 
-
 private:
 	UPROPERTY(EditAnywhere)
 	FVector MoveOffset;
 
 	UPROPERTY(EditAnywhere)
-	float MoveTime = 4;
-
-	
+	float MoveTime = 4;	
 	bool ShouldMove = false;
-
 	FVector OrignalLocation;		
 };
