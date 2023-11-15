@@ -1,8 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "Mover.h"
-
 #include "Math/UnrealMathUtility.h"
 // Sets default values for this component's properties
 UMover::UMover()
@@ -13,8 +9,6 @@ UMover::UMover()
 
 	// ...
 }
-
-
 // Called when the game starts
 void UMover::BeginPlay()
 {
@@ -23,8 +17,6 @@ void UMover::BeginPlay()
 	OrignalLocation = GetOwner()->GetActorLocation();
 	
 }
-
-
 // Called every frame
 void UMover::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
@@ -47,4 +39,3 @@ void UMover::SetShouldMove(bool NewShouldMove)
 {
 	ShouldMove = NewShouldMove;
 } 
-
