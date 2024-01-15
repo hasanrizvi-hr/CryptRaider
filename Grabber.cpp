@@ -8,7 +8,7 @@ UGrabber::UGrabber()
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
 
-	// ...
+	// 
 }
 
 // Called when the game starts
@@ -30,7 +30,6 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 		PhysicsHandle->SetTargetLocationAndRotation(TargetLocation, GetComponentRotation()); 
 	}
 }
-
 void UGrabber::Grab()
 {	
 	UPhysicsHandleComponent* PhysicsHandle = GetPhysicsHandle();
@@ -56,7 +55,6 @@ void UGrabber::Grab()
 			GetComponentRotation()
 		);
 
-
 		//DrawDebugSphere(GetWorld(),HitResult.Location, 10, 10, FColor::Green, false, 5);
 		//DrawDebugSphere(GetWorld(),HitResult.ImpactPoint, 10, 10, FColor::Red, false, 5);
 		//AActor *HitActor = HitResult.GetActor();
@@ -81,7 +79,6 @@ void UGrabber::Release()
 	}
 
 }
-
 UPhysicsHandleComponent* UGrabber::GetPhysicsHandle() const
 {
 	UPhysicsHandleComponent* Result = GetOwner()->FindComponentByClass<UPhysicsHandleComponent>();
@@ -91,7 +88,6 @@ UPhysicsHandleComponent* UGrabber::GetPhysicsHandle() const
 	}
 	return Result;
 }
-
 bool UGrabber::GetGrabbableInReach(FHitResult& OutHitResult) const
 {
 	FVector Start = GetComponentLocation();
