@@ -2,19 +2,14 @@
 UTriggerComponent::UTriggerComponent()
 {
     PrimaryComponentTick.bCanEverTick = true;
-
 }
-
 void UTriggerComponent::BeginPlay()
 {
-	Super::BeginPlay();
-	
+	Super::BeginPlay();	
 }
-
 void UTriggerComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
     Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
     AActor* Actor = GetAcceptableActor();
     if (Actor != nullptr)
     {
@@ -31,7 +26,6 @@ void UTriggerComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAct
         Mover->SetShouldMove(false);
     }
 }
-
 void UTriggerComponent::SetMover(UMover* NewMover)
 {
     Mover = NewMover;
